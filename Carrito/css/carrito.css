@@ -1,0 +1,379 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --colorPrincipal: #FFFFFF;
+    --colorSecundario: #000000;
+    --colorTerciario: #003791;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: var(--colorPrincipal);
+}
+
+.alinearCentro {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--colorTerciario);
+    width: 100%;
+}
+
+.navList {
+    display: flex;
+    list-style-type: none; 
+    gap: 2rem;  
+    place-items: center; 
+}
+
+.navList li a {
+    text-decoration: none;
+}
+
+.opcionesMenuDesplegable {
+    display: none;
+}
+
+.buscar {
+    display: flex;
+}
+
+.buscar a {
+    background-color: var(--colorPrincipal);
+}
+
+.inputBuscar {
+    padding: 10px 50px 10px 35px;
+    background-image: url(../icon/buscarIcono.svg);
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: right 10px center;
+}
+
+.menu {
+    display: none;
+}
+
+.contenedorCategorias {
+    display: grid;
+    text-align: justify;
+    margin-left: 40px;
+}
+
+.contenedorDestacado {
+    display: flex;
+    margin: 5%;
+    border: 1px solid black;
+}
+
+.etiqueta {
+    margin: 3%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.etiquetaSection {
+    background-color: var(--colorPrincipal);
+    width: 2%;
+    border-radius: 7px;
+}
+
+.filtroRapido {
+    margin: 1%;
+}
+
+.etiquetaCategoria {
+    background-color: var(--colorPrincipal);
+    margin: 6%;
+    width: 33%;
+    border-radius: 10px;
+}
+
+.articulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.vinetas {
+    background-color: var(--colorTerciario);
+    border-radius: 7px;
+    margin: 2%;
+}
+
+.descripcion {
+    display: flex;
+}
+
+.requisitos {
+    color: var(--colorPrincipal);
+    margin-right: 20px;
+}
+
+.funcionesRapidas {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.funcionPrincipal {
+    place-items: center;
+    text-align: center;
+    margin: 3%;
+    height: 20vh;
+    width: 25vh;
+    background-color: var(--colorPrincipal);
+    border-radius: 5px;
+}
+
+.titulo {
+    color: white;
+    margin: 5%;
+}
+
+.contenedorMas {
+    display: grid;
+    grid-template-columns: 300px 400px;
+    grid-template-rows: 200px 200px;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+.privacidad {
+    grid-row: 2;
+    grid-column: 2;
+    margin: 5%;
+    border: 1px solid black;
+    background-image: url(../img/privacidad.png);
+    background-attachment: fixed;
+}
+
+footer {
+    background-color: var(--colorTerciario);
+    color: #080808;
+    padding: 40px 20px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerSection {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footerSection h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footerSection p, .footerSection ul, .footerSection a {
+    font-size: 14px;
+    color: #0e0d0d;
+}
+
+.footerSection ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footerSection ul li {
+    margin-bottom: 8px;
+}
+
+.footerSection ul li a {
+    text-decoration: none;
+    color: #050505;
+}
+
+.footerSection ul li a:hover {
+    color: #fff;
+}
+
+.footerBottom {
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footerBottom p {
+    font-size: 14px;
+    color: #003791;
+}
+
+#carritoContenedor {
+    position: absolute;
+    top: 60px;
+    border-radius: 15px;
+    right: 0;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+
+#carritoContenedor button {
+    background-color: var(--colorTerciario);
+    border-radius: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.carritoItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.carritoItem img {
+    width: 30px;
+    height: 30px;
+}
+
+.btnAgregar {
+    background-color: var(--colorPrincipal); 
+    border: none;
+    cursor: pointer; 
+    border-radius: 20px; 
+    margin-top: 10px; 
+}
+
+.btnAgregar:hover {
+    background-color: var(--colorPrincipal);
+}
+
+.vinetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.vinetas img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px; 
+    margin-bottom: 10px; 
+}
+
+.vinetas h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.vinetas .descripcion .requisitos {
+    font-size: 14px;
+    color: #FFFFFF; 
+    margin-bottom: 15px; 
+}
+
+@media screen and (max-width: 767px) {
+    .menu {
+        display: block;
+        border: 1px solid var(--colorSecundario);
+        border-radius: 5px;
+        width: 150%;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        gap: 1rem;
+        background-color: var(--colorPrincipal);
+        padding-top: 0;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navList {
+        flex-direction: column;
+        align-items: end;
+        display: flex;
+    }
+
+    .navList li a {
+        color: white;
+        border-bottom: 1px solid white;
+    }
+
+    .navList .imgLogo {
+        display: none;
+    }
+
+    .opcionesMenuDesplegable {
+        display: block;
+    }
+
+    .buscar:nth-child(5) {
+        order: -5;
+        border: 1px solid black;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 1025px) {
+    .gr1 {width: 8.333%}
+    .gr2 {width: 16.666%;}
+    .gr3 {width: 25%}
+    .gr4 {width: 33.333%;}
+    .gr5 {width: 41.666%;}
+    .gr6 {width: 50%;}
+    .gr7 {width: 58.333%;}
+    .gr8 {width: 66.666%;}
+    .gr9 {width: 75%}
+    .gr10 {width: 83.333%;}
+    .gr11 {width: 91.666%;}
+    .gr12 {width: 100%}
+}
+
+button {
+    margin: 5
+}
